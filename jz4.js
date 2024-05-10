@@ -63,4 +63,4 @@ const pre = [1, 2, 4, 5, 8, 3, 6, 9, 7, 10];
 const mid = [4, 2, 5, 8, 1, 9, 6, 3, 7, 10];
 
 const node = getTree(pre, mid);
-console.log(node)
+console.log(node);

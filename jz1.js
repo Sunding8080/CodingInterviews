@@ -14,7 +14,7 @@
 
 /**
 三种解法：
-1 暴力法 
+1 暴力法
 遍历二维数组 O(n2)
 空间复杂度：O(1)
 
@@ -27,32 +27,32 @@
 **/
 
 const find = (target, arr) => {
-  const row = arr.length - 1; // 行
-  const column = arr[0].length; // 列
+  const row = arr.length - 1 // 行
+  const column = arr[0].length // 列
 
-  let n = 0; // 一维坐标
-  let m = column - 1; // 二维坐标
-  let status = false;
+  let n = 0 // 一维坐标
+  let m = column - 1 // 二维坐标
+  let status = false
 
   while (n <= row && m >= 0) {
     if (target < arr[n][m]) {
-      m--;
+      m--
     } else if (target === arr[n][m]) {
-      return true;
+      return true
     } else {
-      n++;
+      n++
     }
   }
 
-  return false;
+  return false
 }
 
 const arr = [
-  [1,2,8,9],
-  [2,4,9,12],
-  [4,7,10,13],
-  [6,8,11,15],
-  [8,9,12,18],
+  [1, 2, 8, 9],
+  [2, 4, 9, 12],
+  [4, 7, 10, 13],
+  [6, 8, 11, 15],
+  [8, 9, 12, 18],
 ]
 
-console.log(find(12, arr));
+console.log(find(12, arr))
